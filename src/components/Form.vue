@@ -18,11 +18,19 @@ export default {
   methods:{
     criarNome: function(){
       if(this.name ===''){
-        return
+        return 
       }
+
+      var tasks = localStorage.getItem(this.name)
+
+      console.log(tasks)
+
+
       this.$emit("criar",{nome : this.name})
       this.name = ''
-      
+
+
+
     }
   }
 }

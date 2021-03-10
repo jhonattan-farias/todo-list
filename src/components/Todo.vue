@@ -22,10 +22,6 @@ export default {
   data(){
     return{
       tasks:[
-        {
-          name:'sad',
-          id:Date.now()
-        }
       ]
     }
   },
@@ -35,6 +31,8 @@ export default {
       var taskName = $event.nome
 
      this.tasks.push({name:taskName,id:taskName+Date.now()})
+
+     
     },
 
     deletando:function($event){
